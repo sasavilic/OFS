@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-schema xmlns:oor="http://openoffice.org/2001/registry"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    oor:name="Settings" oor:package="com.fortunacommerc.ofs" xml:lang="en-US">
+  <component>
+    <group oor:name="Register">
+      <prop oor:name="Mac" oor:type="xs:string">
+        <value></value>
+      </prop>
+      <prop oor:name="Host" oor:type="xs:string">
+        <value>localhost</value>
+      </prop>
+      <prop oor:name="Port" oor:type="xs:int">
+        <value>3566</value>
+      </prop>
+      <prop oor:name="ApiKey" oor:type="xs:string">
+        <value></value>
+      </prop>
+      <prop oor:name="Pin" oor:type="xs:string">
+        <value></value>
+      </prop>
+    </group>
+    <group oor:name="Logging">
+      <prop oor:name="LogLevel" oor:type="xs:string">
+        <value>INFO</value>
+      </prop>
+    </group>
+  </component>
+</oor:component-schema>

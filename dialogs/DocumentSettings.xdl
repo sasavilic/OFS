@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog"
+            xmlns:script="http://openoffice.org/2000/script"
+            dlg:id="DocumentSettings" dlg:left="0" dlg:top="0"
+            dlg:width="260" dlg:height="212"
+            dlg:title="OFS — Pode&#353;avanja dokumenta" dlg:closeable="true" dlg:moveable="true">
+  <dlg:bulletinboard>
+
+    <!-- Kupac ─────────────────────────────────────────────────── -->
+    <dlg:fixedline dlg:id="sepSection0" dlg:tab-index="0"
+                   dlg:left="6" dlg:top="4" dlg:width="248" dlg:height="10"
+                   dlg:value="Kupac"/>
+    <!-- BuyerId -->
+    <dlg:text      dlg:id="lbl_OFS_Cell_BuyerId"  dlg:tab-index="1"  dlg:left="6"   dlg:top="17" dlg:width="60" dlg:height="10" dlg:value="BuyerId &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_BuyerId"   dlg:tab-index="2"  dlg:left="68"  dlg:top="16" dlg:width="52" dlg:height="12"/>
+    <!-- Buyer range -->
+    <dlg:text      dlg:id="lbl_OFS_Range_Buyer"   dlg:tab-index="3"  dlg:left="6"   dlg:top="31" dlg:width="60" dlg:height="10" dlg:value="Kupac opseg:"/>
+    <dlg:textfield dlg:id="tf_OFS_Range_Buyer"    dlg:tab-index="4"  dlg:left="68"  dlg:top="30" dlg:width="186" dlg:height="12"/>
+
+    <!-- Stavke — redovi ──────────────────────────────────────── -->
+    <dlg:fixedline dlg:id="sepSection1" dlg:tab-index="5"
+                   dlg:left="6" dlg:top="46" dlg:width="248" dlg:height="10"
+                   dlg:value="Stavke &#8212; redovi"/>
+    <!-- FirstRow | LastRow -->
+    <dlg:text      dlg:id="lbl_OFS_Items_FirstRow" dlg:tab-index="6"  dlg:left="6"   dlg:top="59" dlg:width="60" dlg:height="10" dlg:value="Po&#269;etni red:"/>
+    <dlg:textfield dlg:id="tf_OFS_Items_FirstRow"  dlg:tab-index="7"  dlg:left="68"  dlg:top="58" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Items_LastRow"  dlg:tab-index="8"  dlg:left="130" dlg:top="59" dlg:width="60" dlg:height="10" dlg:value="Krajnji red:"/>
+    <dlg:textfield dlg:id="tf_OFS_Items_LastRow"   dlg:tab-index="9"  dlg:left="192" dlg:top="58" dlg:width="62" dlg:height="12"/>
+
+    <!-- Stavke — kolone ──────────────────────────────────────── -->
+    <dlg:fixedline dlg:id="sepSection2" dlg:tab-index="10"
+                   dlg:left="6" dlg:top="74" dlg:width="248" dlg:height="10"
+                   dlg:value="Stavke &#8212; kolone"/>
+    <!-- Name | UOM -->
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemName" dlg:tab-index="11" dlg:left="6"   dlg:top="87" dlg:width="60" dlg:height="10" dlg:value="Naziv:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemName"  dlg:tab-index="12" dlg:left="68"  dlg:top="86" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemUOM"  dlg:tab-index="13" dlg:left="130" dlg:top="87" dlg:width="60" dlg:height="10" dlg:value="Jed.mjere:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemUOM"   dlg:tab-index="14" dlg:left="192" dlg:top="86" dlg:width="62" dlg:height="12"/>
+    <!-- Qty | Price -->
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemQty"   dlg:tab-index="15" dlg:left="6"   dlg:top="101" dlg:width="60" dlg:height="10" dlg:value="Koli&#269;ina:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemQty"    dlg:tab-index="16" dlg:left="68"  dlg:top="100" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemPrice" dlg:tab-index="17" dlg:left="130" dlg:top="101" dlg:width="60" dlg:height="10" dlg:value="Cijena:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemPrice"  dlg:tab-index="18" dlg:left="192" dlg:top="100" dlg:width="62" dlg:height="12"/>
+    <!-- Label | Barcode -->
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemLabel"   dlg:tab-index="19" dlg:left="6"   dlg:top="115" dlg:width="60" dlg:height="10" dlg:value="Por.oznaka:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemLabel"    dlg:tab-index="20" dlg:left="68"  dlg:top="114" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Col_ItemBarcode" dlg:tab-index="21" dlg:left="130" dlg:top="115" dlg:width="60" dlg:height="10" dlg:value="Bar kod:"/>
+    <dlg:textfield dlg:id="tf_OFS_Col_ItemBarcode"  dlg:tab-index="22" dlg:left="192" dlg:top="114" dlg:width="62" dlg:height="12"/>
+
+    <!-- Ukupno ───────────────────────────────────────────────── -->
+    <dlg:fixedline dlg:id="sepSection3" dlg:tab-index="23"
+                   dlg:left="6" dlg:top="130" dlg:width="248" dlg:height="10"
+                   dlg:value="Ukupno"/>
+    <!-- TotalBase | TotalVAT -->
+    <dlg:text      dlg:id="lbl_OFS_Cell_TotalBase" dlg:tab-index="24" dlg:left="6"   dlg:top="143" dlg:width="60" dlg:height="10" dlg:value="Bez PDV &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_TotalBase"  dlg:tab-index="25" dlg:left="68"  dlg:top="142" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Cell_TotalVAT"  dlg:tab-index="26" dlg:left="130" dlg:top="143" dlg:width="60" dlg:height="10" dlg:value="PDV &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_TotalVAT"   dlg:tab-index="27" dlg:left="192" dlg:top="142" dlg:width="62" dlg:height="12"/>
+    <!-- TotalWithVAT | VATPercent -->
+    <dlg:text      dlg:id="lbl_OFS_Cell_TotalWithVAT" dlg:tab-index="28" dlg:left="6"   dlg:top="157" dlg:width="60" dlg:height="10" dlg:value="Sa PDV &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_TotalWithVAT"  dlg:tab-index="29" dlg:left="68"  dlg:top="156" dlg:width="52" dlg:height="12"/>
+    <dlg:text      dlg:id="lbl_OFS_Cell_VATPercent"   dlg:tab-index="30" dlg:left="130" dlg:top="157" dlg:width="60" dlg:height="10" dlg:value="PDV % &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_VATPercent"    dlg:tab-index="31" dlg:left="192" dlg:top="156" dlg:width="62" dlg:height="12"/>
+
+    <!-- Ostalo ───────────────────────────────────────────────── -->
+    <dlg:fixedline dlg:id="sepSection4" dlg:tab-index="32"
+                   dlg:left="6" dlg:top="172" dlg:width="248" dlg:height="10"
+                   dlg:value="Ostalo"/>
+    <!-- InvoiceNumber -->
+    <dlg:text      dlg:id="lbl_OFS_Cell_InvoiceNumber" dlg:tab-index="33" dlg:left="6"  dlg:top="185" dlg:width="60" dlg:height="10" dlg:value="Broj ra&#269;una &#263;elija:"/>
+    <dlg:textfield dlg:id="tf_OFS_Cell_InvoiceNumber"  dlg:tab-index="34" dlg:left="68" dlg:top="184" dlg:width="52" dlg:height="12"/>
+
+    <!-- Buttons ──────────────────────────────────────────────── -->
+    <dlg:button dlg:id="btnCancel" dlg:tab-index="35"
+                dlg:left="174" dlg:top="194" dlg:width="40" dlg:height="12"
+                dlg:value="Odustani" dlg:button-type="cancel"/>
+    <dlg:button dlg:id="btnOK" dlg:tab-index="36"
+                dlg:left="218" dlg:top="194" dlg:width="40" dlg:height="12"
+                dlg:value="Sa&#269;uvaj" dlg:button-type="ok" dlg:default="true"/>
+
+  </dlg:bulletinboard>
+</dlg:window>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dlg:window PUBLIC "-//OpenOffice.org//DTD OfficeDocument 1.0//EN" "dialog.dtd">
+<dlg:window xmlns:dlg="http://openoffice.org/2000/dialog"
+            xmlns:script="http://openoffice.org/2000/script"
+            dlg:id="JsonPreview" dlg:left="0" dlg:top="0"
+            dlg:width="260" dlg:height="220"
+            dlg:title="OFS Preview — ESIR Request" dlg:closeable="true" dlg:moveable="true">
+ <dlg:styles>
+  <dlg:style dlg:style-id="0" dlg:font-name="Liberation Mono" dlg:font-height="8" dlg:font-stylename="Običan" dlg:font-family="modern"/>
+ </dlg:styles>
+ <dlg:bulletinboard>
+  <dlg:textfield dlg:style-id="0" dlg:id="txtJson" dlg:tab-index="0" dlg:left="4" dlg:top="4" dlg:width="252" dlg:height="196"
+            dlg:multiline="true" dlg:readonly="true" dlg:vscroll="true" dlg:hscroll="true"/>
+  <dlg:button dlg:id="btnClose" dlg:tab-index="1" dlg:left="216" dlg:top="204" dlg:width="40" dlg:height="12"
+              dlg:value="Zatvori" dlg:button-type="cancel"/>
+ </dlg:bulletinboard>
+</dlg:window>
