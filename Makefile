@@ -5,8 +5,8 @@ UNOPKG = unopkg
 
 build: $(EXT).oxt
 
-$(EXT).oxt: META-INF/manifest.xml description.xml Addons.xcu OFS.xcs ProtocolHandler.xcu python/ofs.py dialogs/
-	zip -r $(EXT).oxt META-INF/ description.xml Addons.xcu OFS.xcs ProtocolHandler.xcu python/ofs.py dialogs/
+$(EXT).oxt: META-INF/manifest.xml description.xml Addons.xcu OFS.xcs ProtocolHandler.xcu python/ofs.py dialogs/ LICENSE
+	zip -r $(EXT).oxt META-INF/ description.xml Addons.xcu OFS.xcs ProtocolHandler.xcu python/ofs.py dialogs/ LICENSE
 
 install: build
 	$(UNOPKG) remove com.fortunacommerc.ofs 2>/dev/null || true
