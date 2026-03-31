@@ -739,7 +739,7 @@ def send_to_esir_api(request_body, register_config):
     )
     log.info(f"ESIR request: POST {endpoint} body={payload.decode('utf-8')}")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=300) as resp:
             body = resp.read().decode("utf-8")
             log.info(f"ESIR response: HTTP 200 body={body}")
             return True, json.loads(body)
@@ -770,7 +770,7 @@ def esir_check_attention(register_config):
     req = urllib.request.Request(url, headers=headers, method="GET")
     log.info(f"ESIR request: GET {url}")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             log.info(f"ESIR response: HTTP {resp.status} (attention OK)")
             return True, None
     except urllib.error.HTTPError as e:
@@ -862,7 +862,7 @@ def esir_check_status(register_config):
     req = urllib.request.Request(url, headers=headers, method="GET")
     log.info(f"ESIR request: GET {url}")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             body = resp.read().decode("utf-8")
             log.info(f"ESIR response: HTTP {resp.status} body={body}")
             data = json.loads(body)
@@ -902,7 +902,7 @@ def esir_send_pin(register_config):
     req = urllib.request.Request(url, data=payload, headers=headers, method="POST")
     log.info(f"ESIR request: POST {url} body=(PIN omitted)")
     try:
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        with urllib.request.urlopen(req, timeout=120) as resp:
             log.info(f"ESIR response: HTTP {resp.status} (pin OK)")
             return True, None
     except urllib.error.HTTPError as e:
