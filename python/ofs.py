@@ -1309,6 +1309,26 @@ def show_kasa_settings(ctx, doc=None):
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# ESIR initialization entry point
+# ──────────────────────────────────────────────────────────────────────────────
+
+def esir_initialize(ctx):
+    """OFS > Inicijalizacija — testira konekciju sa kasom i otključava SE."""
+    log.info("esir_initialize: started")
+    register_config = load_register_config(ctx)
+    log.debug(f"esir_initialize: {register_config['host']}:{register_config['port']}")
+
+    ok, _lm, err = esir_init(register_config)
+    if ok:
+        show_msgbox(ctx, "Kasa je dostupna i spremna.", "OFS — Inicijalizacija", "info")
+    else:
+        show_msgbox(ctx,
+            f"Greška:\n\n{err}\n\nProvjerite podešavanja i da li je ESIR pokrenut\n"
+            f"na {register_config['host']}:{register_config['port']}.",
+            "OFS — Inicijalizacija", "error")
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Main entry point
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -1436,7 +1456,9 @@ class OFSDispatch(unohelper.Base, XDispatch):
             ctx = self.context
             _g_frame = self.frame
             doc = self.frame.getController().getModel()
-            if self.command == "send_to_ofs":
+            if self.command == "esir_initialize":
+                esir_initialize(ctx)
+            elif self.command == "send_to_ofs":
                 send_to_ofs(ctx, doc)
             elif self.command == "show_document_settings":
                 show_document_settings(ctx, doc)

@@ -33,6 +33,20 @@
                     <value>com.sun.star.sheet.SpreadsheetDocument,com.sun.star.frame.StartModule</value>
                 </prop>
                 <node oor:name="Submenu">
+                    <node oor:name="m000" oor:op="replace">
+                        <prop oor:name="URL" oor:type="xs:string">
+                            <value>vnd.fortunacommerc.ofs:esir_initialize</value>
+                        </prop>
+                        <prop oor:name="Title" oor:type="xs:string">
+                            <value>Inicijalizacija</value>
+                        </prop>
+                        <prop oor:name="Target" oor:type="xs:string">
+                            <value>_self</value>
+                        </prop>
+                        <prop oor:name="Context" oor:type="xs:string">
+                            <value>com.sun.star.sheet.SpreadsheetDocument,com.sun.star.frame.StartModule</value>
+                        </prop>
+                    </node>
                     <node oor:name="m001" oor:op="replace">
                         <prop oor:name="URL" oor:type="xs:string">
                             <value>vnd.fortunacommerc.ofs:send_to_ofs</value>

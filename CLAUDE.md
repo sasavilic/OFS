@@ -77,6 +77,7 @@ OFS meni vidljiv u `SpreadsheetDocument` i `StartModule` (Start Center prikazuje
 
 ```
 OFS
+├── Inicijalizacija        [SpreadsheetDocument + StartModule]
 ├── Fiskalizacija          [samo SpreadsheetDocument]
 ├── Podešavanja dokumenta  [samo SpreadsheetDocument]
 └── Podešavanje kase       [SpreadsheetDocument + StartModule]
@@ -148,6 +149,10 @@ Invoice brojevi: `MOCK-000001`, `MOCK-000002`, ...
 Komande se pozivaju putem `vnd.fortunacommerc.ofs:<command>` protokola.
 `OFSProtocolHandler` prima frame u `initialize()`, prosljeđuje ga `OFSDispatch`,
 koji poziva odgovarajuću Python funkciju sa `(ctx, doc)`.
+
+### `esir_initialize(ctx)`
+Entry point za OFS > Inicijalizacija. Čita sačuvanu konfiguraciju kase (`load_register_config`),
+poziva `esir_init()` (attention → status → pin), i prikazuje rezultat korisniku putem `show_msgbox`.
 
 ### `send_to_ofs(ctx, doc)`
 Glavni entry point — OFS > Fiskalizacija. Tok:
