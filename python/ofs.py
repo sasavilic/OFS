@@ -770,7 +770,7 @@ def esir_check_attention(register_config):
     req = urllib.request.Request(url, headers=headers, method="GET")
     log.info(f"ESIR request: GET {url}")
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             log.info(f"ESIR response: HTTP {resp.status} (attention OK)")
             return True, None
     except urllib.error.HTTPError as e:
@@ -862,7 +862,7 @@ def esir_check_status(register_config):
     req = urllib.request.Request(url, headers=headers, method="GET")
     log.info(f"ESIR request: GET {url}")
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=60) as resp:
             body = resp.read().decode("utf-8")
             log.info(f"ESIR response: HTTP {resp.status} body={body}")
             data = json.loads(body)
